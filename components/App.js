@@ -44,10 +44,7 @@ class App extends Component {
   }
 
   onTodoDelete(todoId) {
-    this.setState({
-      todos:
-        this.state.todos.filter(todo => todo.id !== todoId)
-    });
+    // TODO
   }
 
   onSelectFilter(filter) {

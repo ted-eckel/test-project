@@ -6,11 +6,11 @@ function getFilteredTodos(todos, filter) {
     case 'SHOW_ALL':
       return todos;
     case 'SHOW_ACTIVE':
-      // throw new Error('Show active: please implement me.');
-      return todos.filter(todo => !todo.completed);
+      // TODO
+      return todos;
     case 'SHOW_COMPLETED':
-      // throw new Error('Show completed: please implement me.');
-      return todos.filter(todo => todo.completed);
+      // TODO
+      return todos;
     default:
       return todos;
   }

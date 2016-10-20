@@ -19,8 +19,10 @@ If you have any problems let Chris or I know.
 
 ## Requested Features
 
+Note: The comment '// TODO' is where the feature needs to be completed.
+
 1. The client has requested that they would like to filter the list of todos by active or completed. Currently they can filter by all (default).
 
-2. The client has requested to be able to delete the a todo from the list.
+2. The client has requested to be able to delete a todo from the list.
 
 3. (Bonus) If you have time, the client requests a low priority item: being able to remove/delete all the completed todos. (not required)
