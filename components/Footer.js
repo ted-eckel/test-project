@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 import Link from './Link';
 
-const Footer = ({ selectedFilter, onSelectFilter }) => (
+const Footer = ({selectedFilter, onSelectFilter, onDeleteCompleted}) => (
   <p>
     Show:
     {" "}
@@ -19,12 +19,16 @@ const Footer = ({ selectedFilter, onSelectFilter }) => (
       onClick={ () => onSelectFilter('SHOW_COMPLETED') }>
       Completed
     </Link>
+    <br/>
+    <br/>
+    <a href="#" onClick={() => onDeleteCompleted()}>Remove Completed Todos</a>
   </p>
 );
 
 Footer.propTypes = {
   selectedFilter: PropTypes.string.isRequired,
-  onSelectFilter: PropTypes.func.isRequired
+  onSelectFilter: PropTypes.func.isRequired,
+  onDeleteCompleted: PropTypes.func.isRequired
 }
 
 export default Footer;

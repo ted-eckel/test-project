@@ -19,6 +19,7 @@ class App extends Component {
     this.onSelectFilter = this.onSelectFilter.bind(this);
 
     this.onTodoDelete = this.onTodoDelete.bind(this);
+    this.onDeleteCompleted = this.onDeleteCompleted.bind(this);
   }
 
   onAddTodo(newTodo) {
@@ -44,12 +45,26 @@ class App extends Component {
   }
 
   onTodoDelete(todoId) {
-    // TODO
+    function notDeleted(todo){
+      return todo.id !== todoId
+    }
+    this.setState({
+      todos: this.state.todos.filter(notDeleted)
+    });
   }
 
   onSelectFilter(filter) {
     this.setState({
       filter: filter
+    });
+  }
+
+  onDeleteCompleted(){
+    function isActive(todo){
+      return todo.completed === false;
+    }
+    this.setState({
+      todos: this.state.todos.filter(isActive)
     });
   }
 
@@ -67,7 +82,8 @@ class App extends Component {
 
         <Footer
           selectedFilter={ this.state.filter }
-          onSelectFilter={ this.onSelectFilter } />
+          onSelectFilter={ this.onSelectFilter }
+          onDeleteCompleted={ this.onDeleteCompleted } />
       </div>
     );
   }

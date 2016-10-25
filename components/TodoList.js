@@ -6,11 +6,15 @@ function getFilteredTodos(todos, filter) {
     case 'SHOW_ALL':
       return todos;
     case 'SHOW_ACTIVE':
-      // TODO
-      return todos;
+      function isActive(todo) {
+        return todo.completed === false;
+      };
+      return todos.filter(isActive);
     case 'SHOW_COMPLETED':
-      // TODO
-      return todos;
+      function isCompleted(todo) {
+        return todo.completed === true;
+      };
+      return todos.filter(isCompleted);
     default:
       return todos;
   }
